@@ -52,4 +52,4 @@ run source_xmls/poc_depth_example_validations.xml validation_schemas/poc_schema.
 ```
 
 ## Contact
-Voor vragen of opmerkingen neem contact op met: [reinier.koffijberg@keronic.com](mailto:reinier.koffijberg@keronic.com).
+Voor vragen of opmerkingen neem contact op met: [ariejohan.vande.werken@alliander.com](mailto:ariejohan.vande.werken@alliander.com).
