@@ -1,0 +1,215 @@
+<messages xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <message id="ls_min_measurement_distance_text">
+        <message-text xml:lang="en">
+            LS cable measurement points are too close to each other.
+            Handle: {handle}
+            Measurement points must be at least {distance}m apart.
+        </message-text>
+        <message-text xml:lang="nl">
+            LS-kabelmeetpunten staan te dicht bij elkaar.
+            Handle: {handle}
+            Meetpunten moeten ten minste {distance}m van elkaar verwijderd zijn.
+        </message-text>
+    </message>
+
+    <message id="ls_max_measurement_distance_text">
+        <message-text xml:lang="en">
+            LS cable measurement points are too far apart.
+            Handle: {handle}
+            Measurement points must be at most {distance}m apart.
+        </message-text>
+        <message-text xml:lang="nl">
+            LS-kabelmeetpunten staan te ver van elkaar af.
+            Handle: {handle}
+            Meetpunten mogen ten hoogste {distance}m van elkaar verwijderd zijn.
+        </message-text>
+    </message>
+
+    <message id="ls_max_angle_text">
+        <message-text xml:lang="en">
+            The measurement points of the LS cable form too sharp an angle with each other.
+            Handle: {handle}
+            The minimum angle is {angle_degrees} degrees.
+        </message-text>
+        <message-text xml:lang="nl">
+            De meetpunten van de LS-kabel maken een te scherpe hoek met elkaar.
+            Handle: {handle}
+            De minimale hoek is {angle_degrees} graden.
+        </message-text>
+    </message>
+
+    <message id="ls_mof_cable_count_text">
+        <message-text xml:lang="en">
+            The mof has an invalid number of connections.
+            Handle: {handle}
+            Registered coordinates: {mof_coordinates}
+            Current number of connections: {curr_connections}
+            The number of connections should be between {min_connections} and {max_connections}.
+        </message-text>
+        <message-text xml:lang="nl">
+            De mof heeft een ongeldig aantal verbindingen.
+            Handle: {handle}
+            Geregistreerde coördinaten: {mof_coordinates}
+            Huidig aantal verbindingen: {curr_connections}
+            Het aantal verbindingen moet minimaal {min_connections} en maximaal {max_connections} zijn.
+        </message-text>
+    </message>
+
+    <message id="ms_kabel_end_connection_text">
+        <message-text xml:lang="en">
+            The cable has an invalid number of connections.
+            Handle: {handle}
+            Current number of connections: {curr_connections}
+            Handles of connections: {connected_handles}
+            Because of the status: {status}, the number of connections should be {required_connections}
+        </message-text>
+        <message-text xml:lang="nl">
+            De kabel heeft een ongeldig aantal verbindingen.
+            Handle: {handle}
+            Huidig aantal verbindingen: {curr_connections}
+            Handles van verbindingen: {connected_handles}
+            Met de status: {status}, zou het aantal verbindingen moeten {required_connections} zijn
+        </message-text>
+    </message>
+
+    <message id="ls_mof_aftak_new_cables_spanning">
+        <message-text xml:lang="en">
+            The aftak mof has new cables connected with different voltage levels
+            Handle of the Mof: {handle_mof}
+            Handle and voltage of the 1st connected cable: {handle_1}, {spanning_1}
+            Handle and voltage of the 2nd connected cable: {handle_2}, {spanning_2}
+            Handle and voltage of the 3rd connected cable: {handle_3}, {spanning_3}
+        </message-text>
+        <message-text xml:lang="nl">
+            De aftak mof heeft nieuwe verbonden kabels met verschillende spanningen.
+            Handle van de mof: {handle_mof}
+            Handle en spanning van de 1ste verbonden kabel: {handle_1}, {spanning_1}
+            Handle en spanning van de 2de verbonden kabel: {handle_2}, {spanning_2}
+            Handle en spanning van de 3de verbonden kabel: {handle_3}, {spanning_3}
+        </message-text>
+    </message>
+
+    <message id="ls_mof_aftak_new_cables_count">
+        <message-text xml:lang="en">
+            The aftak mof has an invalid number of cable connections with status NIEUW
+            Handle: {handle_mof}
+            Current number of connections: {curr_count}
+            Handles of connections: {connected_handles}
+            the number of connections should be {required_connections} or 0
+        </message-text>
+        <message-text xml:lang="nl">
+            De aftak mof heeft een ongeldig aantal verbonden kabels met status NIEUW
+            Handle: {handle_mof}
+            Huidig aantal verbindingen: {curr_count}
+            Handles van verbindingen: {connected_handles}
+            het aantal verbindingen moet {required_connections} of 0 zijn
+        </message-text>
+    </message>
+
+    <message id="ls_mof_phase_connected_cables_phase">
+        <message-text xml:lang="en">
+            The mof has an not allowed 3>1 fase configuration
+            Handle mof: {handle_mof}
+            Connected cables handles: {handle_1}, {handle_2}, {handle_3}, {handle_4}
+            Connected cables statuses: {status_1}, {status_2}, {status_3}, {status_4}
+            Allowed statuses, {checked_statuses}
+            Connected L1 cables: {l1_count}
+            Connected L2 cables: {l2_count}
+            Connected L3 cables: {l3_count}
+            Connected F3 cables: {f3_count}
+            Whilst there should've been one of each.
+        </message-text>
+        <message-text xml:lang="nl">
+            De mof heeft een niet toegestane 3>1 fase configuratie
+            Handle mof: {handle_mof}
+            Verbonden kabels handles: {handle_1}, {handle_2}, {handle_3}, {handle_4}
+            Verbonden kabels statussen: {status_1}, {status_2}, {status_3}, {status_4}
+            Toegestane statussen, {checked_statuses}
+            Verbonden L1 kabels: {l1_count}
+            Verbonden L2 kabels: {l2_count}
+            Verbonden L3 kabels: {l3_count}
+            Verbonden F3 kabels: {f3_count}
+            Terwijl er 1 van elk had moeten zijn.
+        </message-text>
+    </message>
+
+    <message id="ls_mof_phase_connected_cables_count">
+        <message-text xml:lang="en">
+            The 3>1 phase mof has an invalid number of cable connections
+            Allowed statuses of cables: {checked_statuses}
+            Handle: {handle_mof}
+            Current number of connections: {curr_count}
+            Handles of connections: {connected_handles}
+            the number of connections should be {required_connections} or 0
+        </message-text>
+        <message-text xml:lang="nl">
+            De 3>1 fase mof heeft een ongeldig aantal verbonden kabels
+            Toegestane statussen van kabels: {checked_statuses}
+            Handle: {handle_mof}
+            Huidig aantal verbindingen: {curr_count}
+            Handles van verbindingen: {connected_handles}
+            het aantal verbindingen moet {required_connections} of 0 zijn
+        </message-text>
+    </message>
+
+    <message id="e_aarddraad_connected_buildings">
+        <message-text xml:lang="en">
+            The aarddraad is not connected to a single building
+            Handle: {handle_mof}
+            Current number of connections: {curr_count}
+            Handles of connections: {connected_handles}
+            the number of connections should be {required_connections}
+        </message-text>
+        <message-text xml:lang="nl">
+            De aarddraad is niet verbonden aan een enkel gebouw
+            Handle: {handle_mof}
+            Huidig aantal verbindingen: {curr_count}
+            Handles van de verbindingen: {connected_handles}
+            het aantal verbindingen moet {required_connections} zijn.
+        </message-text>
+    </message>
+
+    <message id="complex_ls_cable_depth_within_limits">
+        <message-text xml:lang="en">
+            The cable's depth is not within the limits
+            Handle: {handle}
+            The depth should be between: {min_depth} and {max_depth}
+            The point(s) that are outside of this limit are: {wrong_points}
+        </message-text>
+        <message-text xml:lang="nl">
+            De diepte van de kabel ligt niet binnen de limieten
+            Handle: {handle}
+            De diepte zou tussen: {min_depth} and {max_depth} moeten liggen.
+            De punten buiten de limieten zijn: {wrong_points}.
+        </message-text>
+    </message>
+
+    <message id="structure_ls_cable_has_maaiveld">
+        <message-text xml:lang="en">
+            The cable's has a point without a connected maaiveld
+            Handle: {handle}
+            The points without maaiveld are: {wrong_points}.
+        </message-text>
+        <message-text xml:lang="nl">
+            De kabel heeft meetpunten zonder verbonden maaivelden
+            Handle: {handle}
+            De meetpunten zonder maaivelden zijn: {wrong_points}.
+        </message-text>
+    </message>
+
+    <message id="complex_ls_cable_bovengronds_attribute_check">
+        <message-text xml:lang="en">
+            The cables depth does not correspond with the above ground attribute
+            Handle: {handle}
+            Above ground: {Bovengronds}
+            The wrong points are: {wrong_points}.
+        </message-text>
+        <message-text xml:lang="nl">
+            De kabel diepte komt niet overeen met het bovengronds attribuut
+            Handle: {handle}
+            Bovengronds: {Bovengronds}
+            De foute punten zijn: {wrong_points}.
+        </message-text>
+    </message>
+
+</messages>
