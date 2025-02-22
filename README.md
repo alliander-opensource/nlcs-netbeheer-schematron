@@ -18,7 +18,7 @@ Deze repository is gemaakt zodat de netbeheerders zelf deze testen kunnen bekijk
 
 1. Clone de repository:
     ```bash
-    git clone https://github.com/keronic/nlcspp_schematron_poc.git
+    git clone https://github.com/alliander-opensource/nlcs-netbeheer-schematron.git
     ```
 ## Usage
 Wij gaan ervan uit dat je toegang hebt tot het commando: java in cmd.
