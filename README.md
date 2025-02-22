@@ -1,9 +1,6 @@
 # Schematron nlcs++ proof of concept
 Proof of concept van 5 uitgewerkte nlcs++ validaties
 
-## Description
-Deze repository is gemaakt zodat de netbeheerders zelf deze testen kunnen bekijken en uitvoeren
-
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
