@@ -51,7 +51,7 @@ run source_xmls/poc_depth_example_validations.xml validation_schemas/poc_schema.
 Voor vragen of opmerkingen neem contact op met: [ariejohan.vande.werken@alliander.com](mailto:ariejohan.vande.werken@alliander.com).
 
 ## License
-Copyright 2024 Keronic
+Copyright 2025 Keronic
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
