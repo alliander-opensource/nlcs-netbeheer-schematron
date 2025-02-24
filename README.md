@@ -6,6 +6,7 @@ Proof of concept van 5 uitgewerkte nlcs++ validaties
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
+- [License](#license)
 
 ## Description
 Deze repository is gemaakt zodat de netbeheerders zelf deze testen kunnen bekijken en uitvoeren
