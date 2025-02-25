@@ -9,9 +9,11 @@ Proof of concept van 5 uitgewerkte validaties
 - [License](#license)
 
 ## Description
-NLCS Netbeheer is een initiatief van diverse netbeheerders, waterbedrijven en Mijnaansluiting.nl om te komen tot een informatiemodel en nadere invulling van NLCS. Het doel is betere uitwisseling van informatie over bestaande, geplande en gerealiseerde infrastructuur.
+NLCS Netbeheer is een initiatief van diverse netbeheerders, waterbedrijven en Mijnaansluiting.nl om te komen tot een informatiemodel en nadere invulling van NLCS. 
+Het doel is betere uitwisseling van informatie over bestaande, geplande en gerealiseerde infrastructuur.
+
 In het kader van dit informatiemodel is onderzocht in hoeverre schematron een rol kan spelen bij de validatie van de data die in XML wordt vastgelegd.
-Deze repository bevat de resultaten van dit onderzoek zodat de netbeheerders en andere belanghebbenden zelf testen kunnen bekijken en uitvoeren
+Deze repository bevat de resultaten van dit onderzoek zodat de netbeheerders en andere belanghebbenden zelf testen kunnen bekijken en uitvoeren.
 
 
 ## Installation
