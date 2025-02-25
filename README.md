@@ -1,5 +1,5 @@
-# Schematron nlcs++ proof of concept
-Proof of concept van 5 uitgewerkte nlcs++ validaties
+# Schematron nlcs netbeheer        
+Proof of concept van 5 uitgewerkte validaties
 
 ## Table of Contents
 - [Description](#description)
@@ -9,7 +9,9 @@ Proof of concept van 5 uitgewerkte nlcs++ validaties
 - [License](#license)
 
 ## Description
-Deze repository is gemaakt zodat de netbeheerders zelf deze testen kunnen bekijken en uitvoeren
+NLCS Netbeheer is een initiatief van diverse netbeheerders, waterbedrijven en Mijnaansluiting.nl om te komen tot een informatiemodel en nadere invulling van NLCS. Het doel is betere uitwisseling van informatie over bestaande, geplande en gerealiseerde infrastructuur.
+In het kader van dit informatiemodel is onderzocht in hoeverre schematron een rol kan spelen bij de validatie van de data die in XML wordt vastgelegd.
+Deze repository bevat de resultaten van dit onderzoek zodat de netbeheerders en andere belanghebbenden zelf testen kunnen bekijken en uitvoeren
 
 
 ## Installation
