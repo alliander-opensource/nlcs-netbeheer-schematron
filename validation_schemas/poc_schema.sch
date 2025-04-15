@@ -59,8 +59,8 @@
     </phase>
 
     <phase id="v11_complex">
-        <active pattern="v11-complex-ls-mof-aftak-new-cables-spanning"/>
-        <active pattern="complex-ls-mof-phase-cables-connected-phase"/>
+        <active pattern="v11-complex-ls-mof-phase-cables-connected-phase"/>
+        <active pattern="complex-ls-mof-aftak-new-cables-spanning"/>
     </phase>
 
     <!-- xsl functions -->
@@ -97,10 +97,8 @@
     <include href="patterns/ls_mof/v10/complex_ls_mof_phase_cables_connected_phases.sch"/>
     <include href="patterns/ls_mof/v10/structure_ls_mof_phase_cables_connected_count.sch"/>
     <include href="patterns/ls_mof/v10/structure_ls_mof_aftak_new_cables_count.sch"/>
-    <include href="patterns/ls_mof/v11/complex_ls_mof_aftak_new_cables_spanning.sch"/>
     <include href="patterns/ls_mof/v11/complex_ls_mof_phase_cables_connected_phases.sch"/>
     <include href="patterns/ls_mof/v11/structure_ls_mof_phase_cables_connected_count.sch"/>
-    <include href="patterns/ls_mof/v11/structure_ls_mof_aftak_new_cables_count.sch"/>
     <!-- mskabel patterns -->
     <include href="patterns/ms_kabel/v10/structure_ms_cable_connections_count.sch"/>
   </schema>
