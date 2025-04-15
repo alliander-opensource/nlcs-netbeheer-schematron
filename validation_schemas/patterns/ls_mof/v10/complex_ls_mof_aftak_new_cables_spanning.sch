@@ -53,7 +53,7 @@
              value="xs:integer(keronic:ls-mof-new-ls-cable-count())"
              as="xs:integer"/>
 
-        <assert test="if (count($new_ls_cables_connected) = $required_count)
+        <assert id="assert-complex-aftak-voltage" test="if (count($new_ls_cables_connected) = $required_count)
                       then
                       (($spanning_1 = $spanning_2) and ($spanning_1 = $spanning_3))
                       else

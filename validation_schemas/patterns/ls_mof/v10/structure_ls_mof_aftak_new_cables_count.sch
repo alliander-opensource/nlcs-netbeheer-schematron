@@ -44,7 +44,7 @@
                     return $map
                     "/>
 
-        <assert test="$new_cables_count = xs:integer($required_count) or $new_cables_count = 0">
+        <assert id="assert-structure-aftak-connected-cable-count" test="$new_cables_count = xs:integer($required_count) or $new_cables_count = 0">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>
         </assert>
     </rule>

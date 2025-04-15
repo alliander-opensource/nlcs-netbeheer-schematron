@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="structure-ls-mof-phase-cables-connected-count">
-    <rule context="//nlcs:LSmof[nlcs:Functie = 'OVERGANG 3>1 FASE']">
+    <rule context="//nlcs:LSmof[nlcs:Functie = 'OVERGANG']">
         <let name="handle"
              value="nlcs:Handle"/>
 
@@ -42,7 +42,7 @@
                     return $map
                     "/>
 
-        <assert test="(count($ls_cables_connected) = $required_count) or
+        <assert id="assert-structure-phase-connected-cable-count"  test="(count($ls_cables_connected) = $required_count) or
                       (count($ls_cables_connected) = 0)">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>
         </assert>
