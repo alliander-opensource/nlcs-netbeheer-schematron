@@ -44,7 +44,7 @@
         <!--             return $map -->
         <!--             "/> -->
 
-        <assert id="assert-ignore" test="true()">
+        <assert id="assert-ignore" test="false()">
             kabel : <value-of select="$handle"/> is connected to:
             mof: <value-of select="$ls_mof_connected/nlcs:Handle"/>
         </assert>

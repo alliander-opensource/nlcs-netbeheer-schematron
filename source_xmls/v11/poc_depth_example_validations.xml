@@ -45,7 +45,7 @@
       </gml:Point>
     </Geometry>
   </LSmof>
-  <Amaaiveld>
+  <Amaaiveldhoogte>
     <Handle>M2</Handle>
     <Geometry>
       <gml:Point
@@ -54,8 +54,8 @@
         <gml:pos>100.0 100.0 6</gml:pos>
       </gml:Point>
     </Geometry>
-  </Amaaiveld>
-  <Amaaiveld>
+  </Amaaiveldhoogte>
+  <Amaaiveldhoogte>
     <Handle>M1</Handle>
     <Geometry>
       <gml:Point
@@ -64,7 +64,7 @@
         <gml:pos>200.0 200.0 4</gml:pos>
       </gml:Point>
     </Geometry>
-  </Amaaiveld>
+  </Amaaiveldhoogte>
   <LSkabel>
     <Handle>62F1</Handle>
     <Uitvoering>4x95Al 4x6Cu</Uitvoering>
