@@ -26,7 +26,8 @@ De software in deze repository kan worden beschouwd als de 'motor' om de inhoude
 ## Uitgangspunten
 Bij de ontwikkeling van de software zijn de volgende uitgangspunten gehanteerd:
 
-- Testbestanden en inhoudelijke validaties zijn gebaseerd op NLCS++ versie v10
+- Testbestanden en inhoudelijke validaties zijn gebaseerd op NLCS++ versie v10 & v11.
+- De oplossing is schaalbaar naar meerdere versies.
 - De oplossing kan systeem agnostisch en decentraal worden uitgevoerd.
 - Het DWG/DXF-bestand is buiten beschouwing gelaten.
 - Doelstelling is om de inhoudelijke validaties te uniformeren tussen de netbeheerders.
@@ -65,7 +66,7 @@ cd \PATH\TO\REPO
 
 2. Een voorbeeld test met parameters.
 ``` cmd
-java -jar schxslt-cli.jar -d source_xmls/poc_passing_structure_validations.xml -s validation_schemas/poc_schema.sch -o report.xml -p "structure" -v
+java -jar schxslt-cli.jar -d source_xmls/v10/poc_passing_structure_validations.xml -s validation_schemas/poc_schema.sch -o report.xml -p "v10_structure" -v
 ```
 - '-d' (required) = de xml die gevalideerd wordt
 - '-s' (required) = het schema dat gebruikt wordt
@@ -73,34 +74,49 @@ java -jar schxslt-cli.jar -d source_xmls/poc_passing_structure_validations.xml -
 - '-p' (IN POC required) = welke fase testen worden gerund
 - '-v' (optional)(no args) = of fouten in de terminal worden geprint (verbose)
 
-3. alle verschillende testen (via ./run.bat op Windows)
+in de -p parameter wordt aangegeven welke nlcs++ versie gebruikt wordt door een "vX_" prefix aan de fase te geven.
+
+3. alle testen voor v10 (via ./run.bat op Windows)
 ``` cmd
-run source_xmls/poc_passing_structure_validations.xml validation_schemas/poc_schema.sch "structure"
-run source_xmls/poc_failing_structure_validations.xml validation_schemas/poc_schema.sch "structure"
-run source_xmls/poc_passing_complex_validations.xml validation_schemas/poc_schema.sch "complex"
-run source_xmls/poc_failing_complex_validations.xml validation_schemas/poc_schema.sch "complex"
-run source_xmls/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "depth_structure"
-run source_xmls/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "depth_structure"
-run source_xmls/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "depth_complex"
-run source_xmls/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "depth_complex"
-run source_xmls/poc_depth_example_validations.xml validation_schemas/poc_schema.sch "depth_example"
+run source_xmls/v10/poc_passing_structure_validations.xml validation_schemas/poc_schema.sch "v10_structure"
+run source_xmls/v10/poc_failing_structure_validations.xml validation_schemas/poc_schema.sch "v10_structure"
+run source_xmls/v10/poc_passing_complex_validations.xml validation_schemas/poc_schema.sch "v10_complex"
+run source_xmls/v10/poc_failing_complex_validations.xml validation_schemas/poc_schema.sch "v10_complex"
+run source_xmls/v10/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "v10_depth_structure"
+run source_xmls/v10/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "v10_depth_structure"
+run source_xmls/v10/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "v10_depth_complex"
+run source_xmls/v10/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "v10_depth_complex"
+run source_xmls/v10/poc_depth_example_validations.xml validation_schemas/poc_schema.sch "v10_depth_example"
+```
+
+4. alle testen voor v11 (via ./run.bat op Windows)
+``` cmd
+run source_xmls/v11/poc_passing_structure_validations.xml validation_schemas/poc_schema.sch "v11_structure"
+run source_xmls/v11/poc_failing_structure_validations.xml validation_schemas/poc_schema.sch "v11_structure"
+run source_xmls/v11/poc_passing_complex_validations.xml validation_schemas/poc_schema.sch "v11_complex"
+run source_xmls/v11/poc_failing_complex_validations.xml validation_schemas/poc_schema.sch "v11_complex"
+run source_xmls/v11/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "v11_depth_structure"
+run source_xmls/v11/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "v11_depth_structure"
+run source_xmls/v11/poc_passing_depth_validations.xml validation_schemas/poc_schema.sch "v11_depth_complex"
+run source_xmls/v11/poc_failing_depth_validations.xml validation_schemas/poc_schema.sch "v11_depth_complex"
+run source_xmls/v11/poc_depth_example_validations.xml validation_schemas/poc_schema.sch "v11_depth_example"
 ```
 
 Het resultaat van een inhoudelijke validatie van een **valide** XML-bestand wordt als volgt weergeven in de terminal:
 ```cmd
-[valid] ..\nlcs-netbeheer-schematron\source_xmls\poc_passing_structure_validations.xml
+[valid] ..\nlcs-netbeheer-schematron\source_xmls\v10\poc_passing_structure_validations.xml
 ```
 Het resultaat van een inhoudelijke validatie van een **invalide** XML-bestand wordt als volgt weergeven in de terminal:
 ```cmd
-[invalid] ..\nlcs-netbeheer-schematron\source_xmls\poc_failing_structure_validations.xml
-[invalid] ..\nlcs-netbeheer-schematron\source_xmls\poc_failing_structure_validations.xml failed-assert /Q{NLCSnetbeheer}NLCSnetbeheerType[1]/Q{NLCSnetbeheer}Feature[5]/Q{NLCSnetbeheer}MSkabel[1]
+[invalid] ..\nlcs-netbeheer-schematron\source_xmls\v10\poc_failing_structure_validations.xml
+[invalid] ..\nlcs-netbeheer-schematron\source_xmls\v10\poc_failing_structure_validations.xml failed-assert /Q{NLCSnetbeheer}NLCSnetbeheerType[1]/Q{NLCSnetbeheer}Feature[5]/Q{NLCSnetbeheer}MSkabel[1]
             De kabel heeft een ongeldig aantal verbindingen.
             Handle: 6301
             Huidig aantal verbindingen: 3
             Handles van verbindingen: 62EA, 62EB, 62C7
             Met de status: BESTAAND RESERVE, zou het aantal verbindingen moeten 2 zijn
 
-[invalid] ..\nlcs-netbeheer-schematron\source_xmls\poc_failing_structure_validations.xml failed-assert /Q{NLCSnetbeheer}NLCSnetbeheerType[1]/Q{NLCSnetbeheer}Feature[9]/Q{NLCSnetbeheer}MSkabel[1]
+[invalid] ..\nlcs-netbeheer-schematron\source_xmls\v10\poc_failing_structure_validations.xml failed-assert /Q{NLCSnetbeheer}NLCSnetbeheerType[1]/Q{NLCSnetbeheer}Feature[9]/Q{NLCSnetbeheer}MSkabel[1]
             De kabel heeft een ongeldig aantal verbindingen.
             Handle: 6302
             Huidig aantal verbindingen: 1
