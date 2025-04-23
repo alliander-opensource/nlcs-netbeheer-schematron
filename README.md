@@ -1,5 +1,5 @@
 # Schematron NLCS netbeheer        
-Deze repository bevat de versie van de Proof of Concept (PoC) software voor het uitvoeren van inhoudelijke validaties op NLCS++ XML-bestanden.
+Deze repository bevat de versie van de Proof of Concept (PoC) software voor het uitvoeren van inhoudelijke validaties op NLCS++ XML-bestanden. De software ondersteunt versie 10 en 11 van NLCS++.
 
 ## Inhoud
 - [Introductie](#Introductie)
