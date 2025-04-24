@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="structure-ms-cable-connections-count">
+<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="v11-structure-ms-cable-connections-count">
     <rule context="//nlcs:MSkabel">
         <let name="required_connections_start"
              value="keronic:get-ms-cable-connections-start()"/>
@@ -11,7 +11,13 @@
              value="nlcs:Handle"/>
 
         <let name="statuses_to_check"
-             value="keronic:get-statuses-without-empty-ends()"/>
+             value="keronic:v11-get-statuses-without-empty-ends()"/>
+
+        <let name="bedrijfstoestanden_to_check"
+             value="keronic:get-bedrijfstoestand-without-empty-ends()"/>
+
+        <let name="bedrijfstoestand"
+             value="nlcs:Bedrijfstoestand"/>
 
         <let name="status"
              value="nlcs:Status"/>
@@ -89,11 +95,12 @@
                     "/>
 
         <let name="message"
-             value="keronic:get-translation('ms_kabel_end_connection_text')"/>
+             value="keronic:get-translation('v11_ms_kabel_end_connection_text')"/>
 
         <let name="placeholders"
              value="let $map := map{
                     'status' : $status,
+                    'bedrijfstoestand' : $bedrijfstoestand,
                     'handle' : $handle,
                     'required_connections' : string(
                     number($required_connections_start) +
@@ -111,10 +118,11 @@
                     return $map
                     "/>
 
-        <assert test="if (some $status_to_check in ($statuses_to_check) satisfies($status_to_check = $status))
+        <assert id="assert-required-connections" test="if ((some $status_to_check in ($statuses_to_check) satisfies($status_to_check = $status)) and
+                                                       (some $bedrijfstoestand_to_check in ($bedrijfstoestanden_to_check) satisfies($bedrijfstoestand_to_check = $bedrijfstoestand)))
                       then
-                      (($total_connections_start_count = $required_connections_start) and
-                      (($total_connections_end_count = $required_connections_end)))
+                      (($total_connections_start_count = number($required_connections_start)) and
+                      (($total_connections_end_count = number($required_connections_end))))
                       else
                       true()">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>

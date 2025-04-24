@@ -54,7 +54,7 @@
                     return $map
                     "/>
 
-        <assert test="$total_connected  = $required_count">
+        <assert id="assert-connected-buildings" test="$total_connected  = $required_count">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>
         </assert>
     </rule>

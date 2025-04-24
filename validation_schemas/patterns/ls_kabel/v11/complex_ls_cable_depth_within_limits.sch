@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="complex-ls-cable-depth-within-limits">
+<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="v11-complex-ls-cable-depth-within-limits">
     <rule context="//nlcs:LSkabel[
-                   nlcs:Geometry/gml:LineString/@srsDimension = '3'
+                   nlcs:Geometry/gml:LineString/@srsDimension = '3' and
+                   nlcs:Bovengronds = 'Nee'
                    ]">
         <let name="handle"
              value="nlcs:Handle"/>
@@ -19,7 +20,7 @@
              value="keronic:pos-list-apply-relative-depth(
                     $pos_list,
                     $pos_list_dimension,
-                    //nlcs:Amaaiveld)
+                    //nlcs:Amaaiveldhoogte)
                     "/>
         <let name="positions_split"
              value="keronic:split-pos-list-to-posses($pos_list_with_depth)"/>
@@ -44,7 +45,7 @@
                     return $map
                     "/>
 
-        <assert test="empty($positions_with_wrong_depth)">
+        <assert id="assert-depth-within-limits" test="empty($positions_with_wrong_depth)">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>
         </assert>
     </rule>

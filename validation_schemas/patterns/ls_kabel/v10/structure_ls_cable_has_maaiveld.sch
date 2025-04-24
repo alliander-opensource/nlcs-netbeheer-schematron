@@ -44,7 +44,7 @@
                     return $map
                     "/>
 
-        <assert test="empty($positions_without_maaiveld)">
+        <assert id="assert-cable-has-maaiveld" test="empty($positions_without_maaiveld)">
             <value-of select="keronic:replace-placeholders($message, $placeholders)"/>
         </assert>
     </rule>

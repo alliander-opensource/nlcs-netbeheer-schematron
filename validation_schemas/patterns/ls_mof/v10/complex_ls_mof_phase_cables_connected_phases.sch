@@ -75,7 +75,7 @@
              value="xs:integer(keronic:ls-mof-phase-ls-cable-required-count())"
              as="xs:integer"/>
 
-        <assert test="if (count($ls_cables_connected) = $required_count)
+        <assert id="assert-complex-phase-connected-cable-phases" test="if (count($ls_cables_connected) = $required_count)
                       then
                       (
                       (count($ls_cables_l1_connected) = 1) and

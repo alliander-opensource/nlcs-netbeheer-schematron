@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="ls-cable-depth-example">
+<pattern xmlns ="http://purl.oclc.org/dsdl/schematron" id="v11-ls-cable-depth-example">
     <rule context="//nlcs:LSkabel">
         <let name="handle"
              value="nlcs:Handle"/>
@@ -14,7 +14,7 @@
              value="keronic:pos-list-apply-relative-depth(
                     $pos_list,
                     $pos_list_dimension,
-                    //nlcs:Amaaiveld)
+                    //nlcs:Amaaiveldhoogte)
                     "/>
 
         <let name="ls_mof_connected"
@@ -26,7 +26,7 @@
                     let $pos_with_depth := keronic:point-apply-relative-depth(
                     $pos,
                     $pos_dimension,
-                    //nlcs:Amaaiveld)
+                    //nlcs:Amaaiveldhoogte)
                     return
                     keronic:point-connected-to-line($pos_with_depth, $pos_dimension, $pos_list_with_depth, $pos_list_dimension)
                     ]"/>
@@ -44,7 +44,7 @@
         <!--             return $map -->
         <!--             "/> -->
 
-        <assert test="false()">
+        <assert id="assert-ignore" test="false()">
             kabel : <value-of select="$handle"/> is connected to:
             mof: <value-of select="$ls_mof_connected/nlcs:Handle"/>
         </assert>
